@@ -62,49 +62,31 @@ header {
 // HAVING TROUBLE WITH THIS OBV
 
 .app {
-    // someone elses solution that idk how to implement - using for help
-    // align-items: flex-end;
-    // flex-direction: column;
-    // border-radius: 1rem;
-    // background-image: linear-gradient(to bottom, $color-dark 50%, $color-white 50%);
-    // display: flex;
-    // position: relative;
-  
-    // &::before {
-    //   background-image: url("../assets/bg-pattern-2.svg");
-    //   background-position: top center;
-    //   background-repeat: no-repeat;
-    //   background-size: 80%;
-    //   content: "";
-    //   height: 100%;
-    //   left: 0;
-    //   position: absolute;
-    //   top: 0;
-    //   width: 100%;
-    background-image: url('../assets/bg-pattern-2.svg');
     background-color: $black;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-   
+    margin-top: 9rem;
+    border-radius: 12px;
+    
+    
+    .app-background {
+        position: relative;
+        border-radius: 12px;
 
-    // .app-img-wrapper {
-    //     margin: 0 auto;
-    //     transform: translateY(-8rem);
-    //     width: 20rem;
-    // }
+        img {
+            display: block;
+            margin: auto;
+        }
+        
+    }
 
     .app-img {
-        // width: 100%;
+        height: 100%;
         z-index: 100;
-        height: 430px;
         width: 208.97px;
-
-        // position: absolute;
-        // left: 0; 
-        // right: 0; 
-        // margin-left: auto; 
-        // margin-right: auto;
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        top: -100;
+        
 
     }
 }
