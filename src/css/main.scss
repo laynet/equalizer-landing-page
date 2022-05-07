@@ -62,42 +62,43 @@ header {
 // HAVING TROUBLE WITH THIS OBV
 
 .app {
-    align-items: flex-end;
-    flex-direction: column;
-    border-radius: 1rem;
+    // someone elses solution that idk how to implement - using for help
+    // align-items: flex-end;
+    // flex-direction: column;
+    // border-radius: 1rem;
     // background-image: linear-gradient(to bottom, $color-dark 50%, $color-white 50%);
-    display: flex;
-    position: relative;
-  
-    &::before {
-      background-image: url("../assets/bg-pattern-2.svg");
-      background-position: top center;
-      background-repeat: no-repeat;
-      background-size: 80%;
-      content: "";
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    // background-image: url('../assets/bg-pattern-2.svg');
-    // background-color: $black;
-    // background-repeat: no-repeat;
-    // background-position: center;
+    // display: flex;
     // position: relative;
-    }
+  
+    // &::before {
+    //   background-image: url("../assets/bg-pattern-2.svg");
+    //   background-position: top center;
+    //   background-repeat: no-repeat;
+    //   background-size: 80%;
+    //   content: "";
+    //   height: 100%;
+    //   left: 0;
+    //   position: absolute;
+    //   top: 0;
+    //   width: 100%;
+    background-image: url('../assets/bg-pattern-2.svg');
+    background-color: $black;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+   
 
-    .app-img-wrapper {
-        margin: 0 auto;
-        transform: translateY(-8rem);
-        width: 20rem;
-    }
+    // .app-img-wrapper {
+    //     margin: 0 auto;
+    //     transform: translateY(-8rem);
+    //     width: 20rem;
+    // }
 
     .app-img {
-        width: 100%;
-        // z-index: 100;
-        // height: 430px;
-        // width: 208.97px;
+        // width: 100%;
+        z-index: 100;
+        height: 430px;
+        width: 208.97px;
 
         // position: absolute;
         // left: 0; 
