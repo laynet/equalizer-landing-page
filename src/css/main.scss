@@ -61,41 +61,65 @@ header {
 
 // HAVING TROUBLE WITH THIS OBV
 
-.app {
+.hero--sub-section {
     background-color: $black;
     margin-top: 9rem;
     border-radius: 12px;
+    background-image: url("../assets/bg-pattern-2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    position: relative;
     
+    padding-top: 20rem;
     
-    .app-background {
-        position: relative;
-        border-radius: 12px;
-
-        img {
-            display: block;
-            margin: auto;
-        }
+    // .app-background {
+    //     position: relative;
+    //     border-radius: 12px;
+    //     background-image: url("../assets/bg-pattern-2.svg");
+    //     background-repeat: no-repeat;
+    //     background-color: $black;
+    //     background-position: center center;
+        // display: block;
+        //     margin: auto;
+        // img {
+        //     display: block;
+        //     margin: auto;
+        // }
         
-    }
+    // }
 
-    .app-img {
-        height: 100%;
-        z-index: 100;
-        width: 208.97px;
-        position: absolute;
-        left: 0; 
-        right: 0; 
-        top: -100;
+    // .app-img {
+    //     height: 100%;
+    //     z-index: 100;
+    //     width: 208.97px;
+    //     position: absolute;
+    //     left: 0; 
+    //     right: 0; 
+    //     top: -100;
         
 
-    }
+    // }
+}
+.hero--sub-section::after {
+    content: "";
+    background: url("../assets/illustration-app.png");
+    height: 430px;
+    z-index: 100;
+    width: 208.97px;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    top: -100;
 }
 
-.premium {
-   padding: 0; 
-}
+// didn't need after moving card into subsection
+// .premium {
+//    padding: 0; 
+// }
 
 .card--premium {
+    // padding: 0; 
     background: $orange;
     color: $snow;
     border-radius: 12px;
