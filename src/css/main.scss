@@ -20,17 +20,13 @@ html {
     font-family: $font-family;
     background-image: url('../assets/bg-main-mobile.png');
     background-repeat: no-repeat;
+    background-position: right -200px top -200px;
 }
 
 .hero, .footer, .header {
     padding: 1.5rem;
 }
 
-// commented out because it was messing up the scary part and the premium card
-
-// main {
-//     padding: 1.5rem;
-// }
 
 h2 {
     font-weight: 700;
@@ -59,52 +55,30 @@ header {
     margin-bottom: 1.25rem;
 }
 
-// HAVING TROUBLE WITH THIS OBV
-
+    
 .hero--sub-section {
-    background-color: $black;
-    margin-top: 9rem;
-    border-radius: 12px;
-    background-image: url("../assets/bg-pattern-2.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; 
     position: relative;
+    border-radius: 12px;
+    background-color: $black;
+    z-index: 98;
+    margin-top: 9rem;
     
-    padding-top: 20rem;
+    img {
+        display: block;
+        margin: auto;
+        
+    }
     
-    // .app-background {
-    //     position: relative;
-    //     border-radius: 12px;
-    //     background-image: url("../assets/bg-pattern-2.svg");
-    //     background-repeat: no-repeat;
-    //     background-color: $black;
-    //     background-position: center center;
-        // display: block;
-        //     margin: auto;
-        // img {
-        //     display: block;
-        //     margin: auto;
-        // }
-        
-    // }
-
-    // .app-img {
-    //     height: 100%;
-    //     z-index: 100;
-    //     width: 208.97px;
-    //     position: absolute;
-    //     left: 0; 
-    //     right: 0; 
-    //     top: -100;
-        
-
-    // }
 }
-.hero--sub-section::after {
-    content: "";
-    background: url("../assets/illustration-app.png");
-    height: 430px;
+
+.hero--sub-section-img-wrapper {
+    margin-top: -26px;
+    
+}
+
+.hero--sub-section-img {
+    height:inherit;
+    // height: 460px;
     z-index: 100;
     width: 208.97px;
     position: absolute;
@@ -113,10 +87,6 @@ header {
     top: -100;
 }
 
-// didn't need after moving card into subsection
-// .premium {
-//    padding: 0; 
-// }
 
 .card--premium {
     // padding: 0; 
@@ -124,6 +94,9 @@ header {
     color: $snow;
     border-radius: 12px;
     padding: 1.5rem;
+    z-index: 200;
+    // position: absolute;
+    // bottom: 0;
     
 
     .card-premium--title {
