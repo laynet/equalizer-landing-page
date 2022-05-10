@@ -21,6 +21,8 @@ html {
     background-image: url('../assets/bg-main-mobile.png');
     background-repeat: no-repeat;
     background-position: right -200px top -200px;
+
+  
 }
 
 .hero, .footer, .header {
@@ -95,6 +97,7 @@ header {
     border-radius: 12px;
     padding: 1.5rem;
     z-index: 200;
+    position: relative;
     // position: absolute;
     // bottom: 0;
     
