@@ -3,6 +3,7 @@
 $font-family: 'IBM Plex Sans', sans-serif;
 
 $tablet: 760px;
+$desktop: 1100px;
 
 $blue: hsla(177, 68%, 64%, 1);
 $orange: hsla(12, 94%, 65%, 1);
@@ -51,7 +52,19 @@ body {
   // grid-template-rows: min-content 1fr;
 
   overflow-x: hidden;
+
+  @media (min-width: $desktop) {
+    background-image: url('../assets/bg-main-desktop.png');
+    // background-position: right -10rem top -18rem;
+    background-position: left -15rem top -18rem;
+  }
 }
+
+// main {
+//   @media (min-width: $desktop) {
+//     padding: 3rem;
+//   }
+// }
 
 /* make images easier to work with */
 img,
@@ -105,7 +118,7 @@ picutre {
 
   &:hover,
   &:active {
-    background-color: $orange;
+    background-color: $gold;
   }
 }
 
@@ -114,6 +127,9 @@ picutre {
 .card-wrapper {
   @media (min-width: $tablet) {
     padding: 2rem;
+  }
+  @media (min-width: $desktop) {
+    padding: 5rem;
   }
 }
 .card {
@@ -134,6 +150,13 @@ picutre {
     width: 50%;
     top: -367px;
     right: 100px;
+    filter: none;
+  }
+  @media (min-width: $desktop) {
+    width: 30%;
+    top: -603px;
+    right: 177px;
+    padding: 3rem;
   }
 
   h2 {
@@ -173,6 +196,10 @@ picutre {
   @media (min-width: $tablet) {
     background-position: 60% -3rem;
   }
+  @media (min-width: $desktop) {
+    background-position: 50% -3rem;
+    height: 600px;
+  }
 }
 
 .hero {
@@ -187,6 +214,12 @@ picutre {
     background-image: url('../assets/bg-main-tablet.png');
     background-position: right -10rem top -18rem;
     height: 80vh;
+  }
+
+  @media (min-width: $desktop) {
+    background-image: none;
+    padding: 5rem;
+    height: 100vh;
   }
 }
 
@@ -207,6 +240,10 @@ picutre {
     top: -2rem;
     right: -2rem;
     width: 275px;
+  }
+
+  @media (min-width: $desktop) {
+    right: 0;
   }
 }
 
@@ -229,6 +266,12 @@ picutre {
       font-size: 64px;
       line-height: 64px;
       letter-spacing: -0.73px;
+    }
+    @media (min-width: $desktop) {
+      width: 75%;
+      // font-size: 64px;
+      // line-height: 64px;
+      // letter-spacing: -0.73px;
     }
   }
 
@@ -257,6 +300,10 @@ picutre {
     top: 32%;
     left: 240px;
   }
+  @media (min-width: $desktop) {
+    top: 26%;
+    left: 386px;
+  }
 }
 
 .footer {
@@ -270,13 +317,26 @@ picutre {
     justify-content: space-between;
     align-items: center;
   }
+  @media (min-width: $desktop) {
+    padding: 5rem;
+    // justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
 
   .footer-content {
     @media (min-width: $tablet) {
       width: 50%;
     }
+    @media (min-width: $desktop) {
+      display: flex;
+      align-items: flex-start;
+    }
     .footer-logo {
       margin-bottom: 2rem;
+      @media (min-width: $desktop) {
+        margin-right: 13rem;
+      }
     }
 
     .footer-text {
@@ -301,6 +361,10 @@ picutre {
     @media (min-width: $tablet) {
       width: 20%;
       margin-top: 3rem;
+    }
+    @media (min-width: $desktop) {
+      width: 15%;
+      margin-top: 2rem;
     }
     img {
       @media (min-width: $tablet) {
