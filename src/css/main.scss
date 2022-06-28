@@ -1,183 +1,231 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 
 $font-family: 'IBM Plex Sans', sans-serif;
 
-$sky-blue: #66E2DC;
-$orange: #FA7453;
-$gold: #FFB964;
-$snow: #FCFAF9;
-$black: #191826;
+$blue: hsla(177, 68%, 64%, 1);
+$orange: hsla(12, 94%, 65%, 1);
+$gold: hsla(33, 100%, 70%, 1);
+$white: hsla(20, 33%, 98%, 1);
+$black: hsla(244, 23%, 12%, 1);
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/* Reset margins */
 body,
-html {
-    font-family: $font-family;
-    background-image: url('../assets/bg-main-mobile.png');
-    background-repeat: no-repeat;
-    background-position: right -200px top -200px;
-
-  
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
 }
 
-.hero, .footer, .header {
-    padding: 1.5rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 700;
 }
 
+/* set up the body */
+body {
+  font-family: $font-family;
+  color: $black;
+  background-color: $white;
+  min-height: 100vh;
 
-h2 {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 52px;  
+  // display: grid;
+  // grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
 }
 
-.body-1 {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 34px;
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
 }
 
-.body-2 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
+.flex {
+  display: flex;
 }
 
-header {
-   margin-bottom: 4rem;
-   margin-top: 2.5rem; 
+.grid {
+  display: grid;
 }
 
-.hero--title {
-    margin-bottom: 1.25rem;
+.relative-wrapper {
+  position: relative;
 }
 
-    
-.hero--sub-section {
-    position: relative;
-    border-radius: 12px;
-    background-color: $black;
-    z-index: 98;
-    margin-top: 9rem;
-    
-    img {
-        display: block;
-        margin: auto;
-        
-    }
-    
-}
-
-.hero--sub-section-img-wrapper {
-    margin-top: -26px;
-    
-}
-
-.hero--sub-section-img {
-    height:inherit;
-    // height: 460px;
-    z-index: 100;
-    width: 208.97px;
-    position: absolute;
-    left: 0; 
-    right: 0; 
-    top: -100;
-}
-
-
-.card--premium {
-    // padding: 0; 
-    background: $orange;
-    color: $snow;
-    border-radius: 12px;
-    padding: 1.5rem;
-    z-index: 200;
-    position: relative;
-    // position: absolute;
-    // bottom: 0;
-    
-
-    .card-premium--title {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 40px; 
-        margin-bottom: 1rem;
-    }
-
-    .card-premium--text {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px; 
-        margin-bottom: 2.25rem;
-    }
-
-    .card-premium--eyebrow {
-        display: flex;
-        align-items: center;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 32px;
-        letter-spacing: -0.2px;
-        margin-bottom: 2rem;
-
-        span {
-            font-weight: 700;
-            font-size: 65px;
-            line-height: 52px; 
-            margin-right: 1rem;
-        }
-    }
-}
+// buttons
 
 .btn {
-    display: flex;
-    width: 100%;
-    height: 61px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 32px;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    margin: 1rem 0;
-    background: $snow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
 
-    span {
-        margin-right: .4rem;
-    }
+  img {
+    margin-right: 0.5rem;
+  }
 }
 
 .btn--ios {
-    background: $black;
-    color: $snow;
+  color: $white;
+  background: $black;
+
+  &:hover,
+  &:active {
+    background-color: $blue;
+  }
+}
+.btn--android {
+  color: $black;
+  background: $white;
+
+  &:hover,
+  &:active {
+    background-color: $orange;
+  }
+}
+
+//cards
+
+.card-wrapper {
+  padding: 1rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.card--premium {
+  background: $orange;
+  color: $white;
+  padding: 2rem;
+  position: absolute;
+  top: -75px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 2rem;
+  }
+
+  .eyebrow {
+    font-size: 65px;
+    line-height: 52px;
+    display: flex;
+    margin-bottom: 2rem;
+
+    span {
+      font-size: 20px;
+      font-weight: 400;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.card--design {
+  background-color: $black;
+  height: 500px;
+  background-image: url('../assets/bg-pattern-2.svg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  // background-position: center 2rem;
+}
+
+.hero {
+  background-image: url('../assets/bg-main-mobile.png');
+  background-repeat: no-repeat;
+  // background-position: right top;
+  background-position: right -15rem top -15rem;
+  // height: 900px;
+  padding: 2rem;
+  margin-bottom: 8rem;
+}
+
+.hero-logo {
+  margin-bottom: 3.5rem;
+}
+
+.hero-content {
+  * {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.45px;
+  }
+
+  .hero-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.phone-icon {
+  width: 65%;
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .footer {
-    margin: 4rem 0;
-
-    .logo {
-        margin-bottom: 2rem;
-    }
-
-    .footer--text {
-        margin-bottom: 4rem;
-        a {
-            text-decoration: none;
-            font-weight: 700;
-            color: $black;
-        }
-    }
-
-    .social {
-        img {
-            margin-right: 1.25rem;
-        }
-    }
+  padding: 2rem;
+  margin-top: 30rem;
 }
 
+.footer-logo {
+  margin-bottom: 2rem;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 4rem;
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: $black;
+  }
+}
+.social-wrapper {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}

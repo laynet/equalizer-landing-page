@@ -1,48 +1,223 @@
-.app {
-    // someone elses solution that idk how to implement - using for help
-    // align-items: flex-end;
-    // flex-direction: column;
-    // border-radius: 1rem;
-    // background-image: linear-gradient(to bottom, $color-dark 50%, $color-white 50%);
-    // display: flex;
-    // position: relative;
-  
-    // &::before {
-    //   background-image: url("../assets/bg-pattern-2.svg");
-    //   background-position: top center;
-    //   background-repeat: no-repeat;
-    //   background-size: 80%;
-    //   content: "";
-    //   height: 100%;
-    //   left: 0;
-    //   position: absolute;
-    //   top: 0;
-    //   width: 100%;
-    background-image: url('../assets/bg-pattern-2.svg');
-    background-color: $black;
-    background-repeat: no-repeat;
-    background-position: center;
-    // position: relative;
-    // height: 100%;
-    
-   
+took everything out to start over :local-link* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    // .app-img-wrapper {
-    //     position: relative;
-    // height: 100%;
-    // }
+body,
+html {
+  font-family: $font-family;
+  background-image: url('../assets/bg-main-mobile.png');
+  background-repeat: no-repeat;
+  background-position: right -200px top -200px;
+}
 
-    .app-img {
-        // width: 100%;
-        z-index: 100;
-        height: 430px;
-        width: 208.97px;
+.hero,
+.footer,
+.header {
+  padding: 1.5rem;
+}
 
-        position: absolute;
-        // left: 0; 
-        // right: 0; 
-        // margin-left: auto; 
-        // margin-right: auto;
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+}
 
+.body-1 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+}
+
+.body-2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+header {
+  margin-bottom: 4rem;
+  margin-top: 2.5rem;
+
+  @media (min-width: 480px) {
+    background-image: url('../assets/bg-pattern-1.svg');
+  }
+}
+
+.hero {
+  @media (min-width: 480px) {
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    grid-template-areas: ' content .';
+    grid-area: 'content';
+  }
+}
+
+.hero--title {
+  margin-bottom: 1.25rem;
+}
+
+.hero--sub-section {
+  position: relative;
+  border-radius: 12px;
+  background-color: $black;
+  z-index: 98;
+  margin-top: 9rem;
+
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+.hero--sub-section-img-wrapper {
+  margin-top: -26px;
+}
+
+.hero--sub-section-img {
+  height: inherit;
+  // height: 460px;
+  z-index: 100;
+  width: 208.97px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100;
+}
+
+.card--premium {
+  // padding: 0;
+  background: $orange;
+  color: $snow;
+  border-radius: 12px;
+  padding: 1.5rem;
+  z-index: 200;
+  position: relative;
+  // position: absolute;
+  // bottom: 0;
+
+  .card-premium--title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+  }
+
+  .card-premium--text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 2.25rem;
+  }
+
+  .card-premium--eyebrow {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    margin-bottom: 2rem;
+
+    span {
+      font-weight: 700;
+      font-size: 65px;
+      line-height: 52px;
+      margin-right: 1rem;
     }
+  }
+}
+
+.btn {
+  display: flex;
+  width: 100%;
+  height: 61px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 1rem 0;
+  background: $snow;
+
+  span {
+    margin-right: 0.4rem;
+  }
+}
+
+.btn--ios {
+  background: $black;
+  color: $snow;
+}
+
+.footer {
+  margin: 4rem 0;
+
+  .logo {
+    margin-bottom: 2rem;
+  }
+
+  .footer--text {
+    margin-bottom: 4rem;
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: $black;
+    }
+  }
+
+  .social {
+    img {
+      margin-right: 1.25rem;
+    }
+  }
+}
+
+.app {
+  // someone elses solution that idk how to implement - using for help
+  // align-items: flex-end;
+  // flex-direction: column;
+  // border-radius: 1rem;
+  // background-image: linear-gradient(to bottom, $color-dark 50%, $color-white 50%);
+  // display: flex;
+  // position: relative;
+
+  // &::before {
+  //   background-image: url("../assets/bg-pattern-2.svg");
+  //   background-position: top center;
+  //   background-repeat: no-repeat;
+  //   background-size: 80%;
+  //   content: "";
+  //   height: 100%;
+  //   left: 0;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100%;
+  background-image: url('../assets/bg-pattern-2.svg');
+  background-color: $black;
+  background-repeat: no-repeat;
+  background-position: center;
+  // position: relative;
+  // height: 100%;
+
+  // .app-img-wrapper {
+  //     position: relative;
+  // height: 100%;
+  // }
+
+  .app-img {
+    // width: 100%;
+    z-index: 100;
+    height: 430px;
+    width: 208.97px;
+
+    position: absolute;
+    // left: 0;
+    // right: 0;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
 }

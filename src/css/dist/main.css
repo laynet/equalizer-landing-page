@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 700;
+}
+
+/* set up the body */
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #191826;
+  background-color: #fcf9f8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.relative-wrapper {
+  position: relative;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+.btn img {
+  margin-right: 0.5rem;
+}
+
+.btn--ios {
+  color: #fcf9f8;
+  background: #191826;
+}
+.btn--ios:hover, .btn--ios:active {
+  background-color: #65e2db;
+}
+
+.btn--android {
+  color: #191826;
+  background: #fcf9f8;
+}
+.btn--android:hover, .btn--android:active {
+  background-color: #fa7352;
+}
+
+.card-wrapper {
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.card--premium {
+  background: #fa7352;
+  color: #fcf9f8;
+  padding: 2rem;
+  position: absolute;
+  top: -75px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.card--premium h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 1rem;
+}
+.card--premium p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 2rem;
+}
+.card--premium .eyebrow {
+  font-size: 65px;
+  line-height: 52px;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.card--premium .eyebrow span {
+  font-size: 20px;
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+.card--design {
+  background-color: #191826;
+  height: 500px;
+  background-image: url("../assets/bg-pattern-2.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.hero {
+  background-image: url("../assets/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-position: right -15rem top -15rem;
+  padding: 2rem;
+  margin-bottom: 8rem;
+}
+
+.hero-logo {
+  margin-bottom: 3.5rem;
+}
+
+.hero-content * {
+  margin-bottom: 1.5rem;
+}
+.hero-content .hero-title {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.45px;
+}
+.hero-content .hero-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.phone-icon {
+  width: 65%;
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer {
+  padding: 2rem;
+  margin-top: 30rem;
+}
+
+.footer-logo {
+  margin-bottom: 2rem;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+.footer-text a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #191826;
+}
+
+.social-wrapper {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
